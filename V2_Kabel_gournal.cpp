@@ -1,6 +1,6 @@
 ﻿// V2_Kabel_gournal.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //http://blog.kislenko.net/show.php?id=1402
-
+#include<Windows.h>
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -28,18 +28,24 @@ int main() {
 	ofstream output("output.txt"); //Открываешь второй файл для записи
 	while (getline(input, string_buf))  //Считываешь из файла строку (пока не EOF)End Of File
 	{
-		lisp_1 = "(command \"_. - layer\" \"_m\" \""; // строка из лиспа для автокада - начало
-		lisp_1.append (string_buf); // складываем строку из файла и строку lisp1
-		if (getline(input, string_buf, ' '))
+		if (getline(input, string_buf, '<'))
 		{
-			lisp_2 = "\" \"\") (vla - InsertBlock obj(vlax - 3D - point '(4000	107376 0))  \"";// строка из лиспа для автокада - середина
+			lisp_1 = "(command \"_. - layer\" \"_m\" \""; // строка из лиспа для автокада - начало
+			lisp_1.append(string_buf); // складываем строку из файла и строку lisp1
+		}
+		if (getline(input, string_buf, '<'))
+		{
+			lisp_2 = "\" \"\") (vla - InsertBlock obj(vlax - 3D - point '(4000 107376 0))  \"";// строка из лиспа для автокада - середина
 				lisp_1.append(lisp_2); // складываем строку из файла и строку lisp2
 		}
-		lisp_1.append(string_buf);
-		lisp_3 = "\" 1 1 1 0)";// строка из лиспа для автокада - конец
-		lisp_1.append(lisp_3);
-		//string_sum3 = lisp_3 + string_buf; // складываем строку из файла и строку lisp3
-
+		if (getline(input, string_buf,'>'))
+		{
+			lisp_1.append(string_buf);
+			lisp_3 = "\" 1 1 1 0)";// строка из лиспа для автокада - конец
+			lisp_1.append(lisp_3);
+			//string_sum3 = lisp_3 + string_buf; // складываем строку из файла и строку lisp3
+		}
+		cout << lisp_1 << endl;
 		output << lisp_1 << endl;  //И записываешь эту строку в выходной файл
 	}
 	system("pause");
