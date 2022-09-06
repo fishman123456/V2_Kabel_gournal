@@ -9,8 +9,8 @@ ENet-7.PO-K1 remote_controller
 7.PT2-K1 sensor
 7.FIT-K1 sensor
 7.KK3-K1 Terminal_box
-7.PT3-K1 sensor
-7.TT1-K1 sensor
+7.PT3-K1  sensor
+7.TT1-K1  sensor
 7.KK4-K1 Terminal_box
 7.TE5-K1 sensor
 7.TE6-K1 sensor
