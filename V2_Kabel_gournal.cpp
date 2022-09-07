@@ -30,14 +30,13 @@ int main() {
 	{
 		if (getline(input, string_buf, '<'))
 		{
+			
 			lisp_1 = "(command \"_. - layer\" \"_m\" \""; // строка из лиспа для автокада - начало
 			lisp_1.append(string_buf); // складываем строку из файла и строку lisp1
-		}
-		if (getline(input, string_buf, '<'))
-		{
 			lisp_2 = "\" \"\") (vla - InsertBlock obj(vlax - 3D - point '(4000 107376 0))  \"";// строка из лиспа для автокада - середина
-				lisp_1.append(lisp_2); // складываем строку из файла и строку lisp2
+			lisp_1.append(lisp_2); // складываем строку из файла и строку lisp2
 		}
+	
 		if (getline(input, string_buf,'>'))
 		{
 			lisp_1.append(string_buf);
