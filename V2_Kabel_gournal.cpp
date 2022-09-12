@@ -30,6 +30,7 @@ using namespace std;
 
 int main()
 {
+	system("chcp 1251");
 	string lisp_1; // начало строки лиспа
 	string lisp_2; // середина строки лиспа
 	string lisp_3; // конец строки лиспа
@@ -51,6 +52,7 @@ int main()
 		count_1++;					// кол-во элементов в файле + одна строка сверху пустая
 	}
 	cout << "count_1 = " << count_1 << endl; // счетчик для вывода на консоль
+	cout << "Откройте файл output.txt пересохраните его в *.lsp" << endl;
 	//cin.sync();
 //cin.get();
 	ifstream input("test.txt"); //Открываешь первый файл для чтения

@@ -59,7 +59,6 @@ old_osnap(getvar "OSMODE")
 (command "_.-layer" "_m" "7.VB-S1" "") (vla-InsertBlock obj(vlax-3D-point '(178000 2000 0))  "Terminal_box" 1 1 1 0)
 (command "_.-layer" "_m" "7.VB-S2" "") (vla-InsertBlock obj(vlax-3D-point '(182000 2000 0))  "electric_motor" 1 1 1 0)
 (command "_.-layer" "_m" "7.VB-K2" "") (vla-InsertBlock obj(vlax-3D-point '(186000 2000 0))  "Terminal_box" 1 1 1 0)
-(command "_.-layer" "_m" "
-" "") (vla-InsertBlock obj(vlax-3D-point '(190000 2000 0))  "
+
 (alert "Закончили")
 )
