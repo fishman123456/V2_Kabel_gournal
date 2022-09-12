@@ -1,5 +1,6 @@
 
-7.HA-S1<siren>
+777.HA-S3<siren>
+7.HA-S3<siren>
 7.PG1-S1<electric_motor>
 7.PO-K1<remote_controller>
 7.KK1-K1<Terminal_box>
