@@ -56,9 +56,24 @@ int main()
 	ifstream input("test.txt"); //Открываешь первый файл для чтения
 	string string_buf; //Строка-буфер
 	ofstream output("output.txt"); //Открываешь второй файл для записи
+	output << "(defun C:F_Blockinsert(/ x1 x2 x3)\n";
+	output << " (setq actdoc(vla-get-ActiveDocument(vlax-get-acad-object)))\n";
+	output << "	(setq obj(vla-get-ModelSpace actdoc))\n";
+	output << "(setq x1 1); начальное значение списка равно нулю, потом его увеличиваем на еденицу и получаем список\n";
+	output << "(setq x2 1); на сколько будем увеличивать порядковый номер элемента списка\n";
+	output << "; Запоминаем текущее состояние режимов ORTHO, SNAP И OSNAP\n";
+	output << "(setq old_ortho(getvar \"ORTHOMODE\")\n";
+	output << "old_snap(getvar \"SNAPMODE\")\n";
+	output << "old_osnap(getvar \"OSMODE\")\n";
+	output << "	)\n";
+	output << "	; отключаем режимы ORTHO, SNAP И OSNAP\n";
+	output << "(princ \"Input : F_Blockinsert \"); формирование файла происходит с помощью С++, Спасибо обучению в Академми ШАГ, ныне ТОР\n";
+	output << "(setvar \"ORTHOMODE\" 0); и лично Бакун Александр Владимтрович\n";
+	output << "(setvar \"SNAPMODE\" 0)\n";
+	output << "(setvar \"OSMODE\" 0)\n";
+
 	while (getline(input, string_buf))  //Считываешь из файла строку (пока не EOF)End Of File
 	{
-		
 		if (getline(input, string_buf, '<'))
 		{
 			orX += 4000; // увеличиваем координату по Х
@@ -68,24 +83,26 @@ int main()
 
 			lisp_1 = "(command \"_.-layer\" \"_m\" \""; // строка из лиспа для автокада - начало
 			lisp_1.append(string_buf); // складываем строку из файла и строку lisp1
-			lisp_2 = "\" \"\") (vla-InsertBlock obj(vlax-3D-point '("+ s_orX+" "+ s_orY+" " + s_orZ + "))  \"";// строка из лиспа для автокада - середина
+			lisp_2 = "\" \"\") (vla-InsertBlock obj(vlax-3D-point '("+ s_orX+" "+ s_orY+" " + s_orZ + "))  \"";
+			// строка из лиспа для автокада - середина
 			//lisp_2 = "\" \"\") (vla-InsertBlock obj(vlax-3D-point '( 4000  107376 0))  \"";// строка из лиспа для автокада - середина
 			lisp_1.append(lisp_2); // складываем строку из файла и строку lisp2
 		}
-
 		if (getline(input, string_buf, '>'))
 		{
 			lisp_1.append(string_buf);
 			lisp_3 = "\" 1 1 1 0)";// строка из лиспа для автокада - конец
 			lisp_1.append(lisp_3); // добавляем в конец строки
-			cout << endl;
+			//cout << endl;
 		}
-		cout << lisp_1 << endl;
+		//cout << lisp_1 << endl;
 		output << lisp_1 << endl;  //И записываешь эту строку в выходной файл	
 		count_2++;
-		
 	}
-	cout << "count_2 = " << count_2 << endl;
+	//cout << "count_2 = " << count_2 << endl;
+	output << "(alert \"Закончили\")\n";
+	output << ")\n";
+		//) << endl;  //записываем заключительную строку в выходной файл	
 	input.close();
 	output.close();
 	system("pause");
