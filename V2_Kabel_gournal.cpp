@@ -60,7 +60,7 @@ int main()
 //cin.get();
 	ifstream input("test.txt"); //Открываешь первый файл для чтения
 	string string_buf; //Строка-буфер
-	ofstream output("output.txt"); //Открываешь второй файл для записи
+	ofstream output("output.lsp"); //Открываешь второй файл для записи
 	output << ";// ОБЯЗАТЕЛЬНО ОСТАВЛЯТЬ ПУСТУЮ СТРОКУ В ТЕКСТОВОМ ФАЙЛЕ В НАЧАЛЕ\n";
 	output << ";// ЗАПРЕЩЕНО ОСТАВЛЯТЬ ПУСТЫЕ СТРОКИ В ТЕКСТОВОМ ФАЙЛЕ В КОНЦЕ\n";
 	output << "(defun C:F_Blockinsert(/ x1 x2 x3)\n";
