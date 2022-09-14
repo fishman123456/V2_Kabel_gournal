@@ -1,0 +1,18 @@
+Извлечь файлы в одну папку. Нужно 3 файла 
+
+C:\Users\Fishman.DB.CORP\Documents\GitHub\V2_Kabel_gournal\x64\Release
+
+"C:\Users\Fishman.DB.CORP\Documents\GitHub\V2_Kabel_gournal\x64\Release\output.lsp"
+"C:\Users\Fishman.DB.CORP\Documents\GitHub\V2_Kabel_gournal\x64\Release\Test.txt"
+"C:\Users\Fishman.DB.CORP\Documents\GitHub\V2_Kabel_gournal\x64\Release\V2_Kabel_gournal.exe"
+
+В файл Test.txt скопировать имя слоя и имя блока в  формате ----    7.FIT-K1<sensor>     ----   
+Запустить исполняемый файл "C:\Users\Fishman.DB.CORP\Documents\GitHub\V2_Kabel_gournal\x64\Release\V2_Kabel_gournal.exe"
+
+Добавить  output.lsp в autocad
+Написать в коммандной строке - F_Blockinsert
+ввести начальную точку X
+ввести начальную точку Y
+приращение по X
+приращение по Y
+и магия блоки в модели
