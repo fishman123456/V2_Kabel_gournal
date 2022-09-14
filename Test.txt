@@ -45,4 +45,3 @@
 7.VB-S1<Terminal_box>
 7.VB-S2<electric_motor>
 7.VB-K2<Terminal_box>
-

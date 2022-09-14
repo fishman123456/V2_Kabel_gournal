@@ -39,6 +39,9 @@ int main()
 	int orX{ 2000 };
 	int orY{ 2000 };
 	int orZ{ 0 };
+	int orX_P{ 0 };
+	int orY_P{ 0 };
+	int orZ_P{ 0 };
 	//setlocale(LC_ALL, "RUS");
 	//system("chcp 1251"); // настраиваем кодировку консоли
 	ifstream file;            // создать поточный объект file
@@ -58,6 +61,8 @@ int main()
 	ifstream input("test.txt"); //Открываешь первый файл для чтения
 	string string_buf; //Строка-буфер
 	ofstream output("output.txt"); //Открываешь второй файл для записи
+	output << ";// ОБЯЗАТЕЛЬНО ОСТАВЛЯТЬ ПУСТУЮ СТРОКУ В ТЕКСТОВОМ ФАЙЛЕ В НАЧАЛЕ\n";
+	output << ";// ЗАПРЕЩЕНО ОСТАВЛЯТЬ ПУСТЫЕ СТРОКИ В ТЕКСТОВОМ ФАЙЛЕ В КОНЦЕ\n";
 	output << "(defun C:F_Blockinsert(/ x1 x2 x3)\n";
 	output << " (setq actdoc(vla-get-ActiveDocument(vlax-get-acad-object)))\n";
 	output << "	(setq obj(vla-get-ModelSpace actdoc))\n";
@@ -73,38 +78,51 @@ int main()
 	output << "(setvar \"ORTHOMODE\" 0); и лично Бакун Александр Владимтрович\n";
 	output << "(setvar \"SNAPMODE\" 0)\n";
 	output << "(setvar \"OSMODE\" 0)\n";
+	cout << "введите начальную координату по X:\t";
+	cin >> orX;
+	cout << "\nвведите начальную координату по Y:\t";
+	cin >> orY;
+	cout << "\nвведите приращение по X\t";
+	cin >> orX_P;
+	cout << "\nвведите приращение по Y\t";
+	cin >> orY_P;
+	cout << "\n";
 
 	while (getline(input, string_buf))  //Считываешь из файла строку (пока не EOF)End Of File
 	{
-		if (getline(input, string_buf, '<'))
-		{
-			orX += 4000; // увеличиваем координату по Х
-			string s_orX = to_string(orX); // переводим число в строку для вставки в файл txt
-			string s_orY = to_string(orY); // переводим число в строку для вставки в файл txt
-			string s_orZ = to_string(orZ); // переводим число в строку для вставки в файл txt
+			if ((getline(input, string_buf, '<')) && !string_buf.empty())
+			{
+				orX += orX_P; // увеличиваем координату по Х
+				orY += orY_P; // увеличиваем координату по Y
+				string s_orX = to_string(orX); // переводим число в строку для вставки в файл txt
+				string s_orY = to_string(orY); // переводим число в строку для вставки в файл txt
+				string s_orZ = to_string(orZ); // переводим число в строку для вставки в файл txt
 
-			lisp_1 = "(command \"_.-layer\" \"_m\" \""; // строка из лиспа для автокада - начало
-			lisp_1.append(string_buf); // складываем строку из файла и строку lisp1
-			lisp_2 = "\" \"\") (vla-InsertBlock obj(vlax-3D-point '("+ s_orX+" "+ s_orY+" " + s_orZ + "))  \"";
-			// строка из лиспа для автокада - середина
-			//lisp_2 = "\" \"\") (vla-InsertBlock obj(vlax-3D-point '( 4000  107376 0))  \"";// строка из лиспа для автокада - середина
-			lisp_1.append(lisp_2); // складываем строку из файла и строку lisp2
-		}
-		if (getline(input, string_buf, '>'))
-		{
-			lisp_1.append(string_buf);
-			lisp_3 = "\" 1 1 1 0)";// строка из лиспа для автокада - конец
-			lisp_1.append(lisp_3); // добавляем в конец строки
-			//cout << endl;
-		}
-		//cout << lisp_1 << endl;
-		output << lisp_1 << endl;  //И записываешь эту строку в выходной файл	
-		count_2++;
+				lisp_1 = "(command \"_.-layer\" \"_m\" \""; // строка из лиспа для автокада - начало
+				lisp_1.append(string_buf); // складываем строку из файла и строку lisp1
+				lisp_2 = "\" \"\") (vla-InsertBlock obj(vlax-3D-point '(" + s_orX + " " + s_orY + " " + s_orZ + "))  \"";
+				// строка из лиспа для автокада - середина
+				//lisp_2 = "\" \"\") (vla-InsertBlock obj(vlax-3D-point '( 4000  107376 0))  \"";// строка из лиспа для автокада - середина
+				lisp_1.append(lisp_2); // складываем строку из файла и строку lisp2
+			}
+			if ((getline(input, string_buf, '>')) && !string_buf.empty())
+			{
+				lisp_1.append(string_buf);
+				lisp_3 = "\" 1 1 1 0)";// строка из лиспа для автокада - конец
+				lisp_1.append(lisp_3); // добавляем в конец строки
+				//cout << endl;
+			}
+			cout << lisp_1 << endl;
+			output << lisp_1 << endl;  //И записываешь эту строку в выходной файл	
+			count_2++;
 	}
 	//cout << "count_2 = " << count_2 << endl;
 	output << "(alert \"Закончили\")\n";
 	output << ")\n";
-		//) << endl;  //записываем заключительную строку в выходной файл	
+	
+	//) << endl;  //записываем заключительную строку в выходной файл	
+	// ОБЯЗАТЕЛЬНО ОСТАВЛЯТЬ ПУСТУЮ СТРОКУ В ТЕКСТОВОМ ФАЙЛЕ В НАЧАЛЕ
+	// ЗАПРЕЩЕНО ОСТАВЛЯТЬ ПУСТЫЕ СТРОКИ В ТЕКСТОВОМ ФАЙЛЕ В КОНЦЕ
 	input.close();
 	output.close();
 	system("pause");
