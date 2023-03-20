@@ -30,6 +30,8 @@ using namespace std;
 
 int main()
 {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	system("chcp 1251");
 	string lisp_1; // начало строки лиспа
 	string lisp_2; // середина строки лиспа
@@ -49,6 +51,7 @@ int main()
 	if (!file) return 1;      // возврат по ошибке отрытия
 	char str[40];             // статический буфер строки
 	// Считывать и отображать строки в цикле, пока не eof
+	
 	while (!file.getline(str, sizeof(str)).eof())
 	{
 		cout << str << endl;     // вывод прочитанной строки на экран

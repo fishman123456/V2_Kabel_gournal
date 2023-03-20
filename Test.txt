@@ -1,47 +1,135 @@
 
-777.HA-S3<siren>
-7.HA-S3<siren>
-7.PG1-S1<electric_motor>
-7.PO-K1<remote_controller>
-7.KK1-K1<Terminal_box>
-7.TE1-K1<sensor>
-7.PT1-K1<sensor>
-7.KK2-K1<Terminal_box>
-7.TE2-K1<sensor>
-7.PT2-K1<sensor>
-7.FIT-K1<sensor>
-7.KK3-K1<Terminal_box>
-7.PT3-K1<sensor>
-7.TT1-K1<sensor>
-7.KK4-K1<Terminal_box>
-7.TE5-K1<sensor>
-7.TE6-K1<sensor>
-7.LS.KK-K1<Terminal_box>
-7.LS1-K1<sensor>
-7.LS2-K1<sensor>
-7.PO1-S1<remote_controller>
-7.PO1-K1<remote_controller>
-7.DS2-S1<electric_motor>
-7.DS2-K2<Terminal_box>
-7.LE1-K1<sensor>
-7.LE2-K1<sensor>
-7.VVD-S1<electric_motor>
-7.VVD-K2<Terminal_box>
-7.VND-S1<electric_motor>
-7.VND-K2<Terminal_box>
-7.DS1-S1<electric_motor>
-7.DS1-K2<Terminal_box>
-7.US-S1<electric_motor>
-7.US-K2<Terminal_box>
-7.US.KK2-K1<Terminal_box>
-7.US.SQ1-K1<sensor>
-7.US.SQ2-K1<sensor>
-7.ZST-K1<sensor>
-7.TE4-K1<sensor>
-7.SS-S1<electric_motor>
-7.SS-K2<Terminal_box>
-7.PT-S1<electric_motor>
-7.PT-K2<Terminal_box>
-7.VB-S1<Terminal_box>
-7.VB-S2<electric_motor>
-7.VB-K2<Terminal_box>
+ПУ155-I	<remote_controller_2023>
+ШУ155-I	<electric-cabinet_2022>
+155-Iа.M	<electric_motor>
+155-Iб1.M	<electric_motor>
+155-Iб2.M	<electric_motor>
+155-Iв.M	<electric_motor>
+ШУ155-I	<electric-cabinet_2022>
+155-I.P	<sensor>
+2ШПС1	<electric-cabinet_2022>
+ПУ155-I	<remote_controller_2023>
+ПУ155-II	<remote_controller_2023>
+ШУ155-II	<electric-cabinet_2022>
+155-IIа.M	<electric_motor>
+155-IIб1.M	<electric_motor>
+155-IIб2.M	<electric_motor>
+155-IIв.M	<electric_motor>
+ШУ155-II	<electric-cabinet_2022>
+155-II.P	<sensor>
+2ШПС1	<electric-cabinet_2022>
+ПУ155-II	<remote_controller_2023>
+ПУ155-III	<remote_controller_2023>
+ШУ155-III	<electric-cabinet_2022>
+155-IIIа.M	<electric_motor>
+155-IIIб1.M	<electric_motor>
+155-IIIб2.M	<electric_motor>
+155-IIIв.M	<electric_motor>
+ШУ155-III	<electric-cabinet_2022>
+155-III.P	<sensor>
+2ШПС1	<electric-cabinet_2022>
+ПУ155-III	<remote_controller_2023>
+ПУ155-IV	<remote_controller_2023>
+ШУ155-IV	<electric-cabinet_2022>
+155-IVа.M	<electric_motor>
+155-IVб1.M	<electric_motor>
+155-IVб2.M	<electric_motor>
+155-IVв.M	<electric_motor>
+ШУ155-IV	<electric-cabinet_2022>
+155-IV.P	<sensor>
+2ШПС1	<electric-cabinet_2022>
+ПУ155-IV	<remote_controller_2023>
+ПУ164-I	<remote_controller_2023>
+ШУ164-I	<electric-cabinet_2022>
+164-Iа.M	<electric_motor>
+164-Iб1.M	<electric_motor>
+164-Iб2.M	<electric_motor>
+164-Iв.M	<electric_motor>
+ШУ164-I	<electric-cabinet_2022>
+164-I.P	<sensor>
+2ШПС1	<electric-cabinet_2022>
+ПУ164-I	<remote_controller_2023>
+ПУ164-II	<remote_controller_2023>
+ШУ164-II	<electric-cabinet_2022>
+164-IIа.M	<electric_motor>
+164-IIб1.M	<electric_motor>
+164-IIб2.M	<electric_motor>
+164-IIв.M	<electric_motor>
+ШУ164-II	<electric-cabinet_2022>
+164-II.P	<sensor>
+2ШПС1	<electric-cabinet_2022>
+ПУ164-II	<remote_controller_2023>
+ПУ164-III	<remote_controller_2023>
+ШУ164-III	<electric-cabinet_2022>
+164-IIIа.M	<electric_motor>
+164-IIIб1.M	<electric_motor>
+164-IIIб2.M	<electric_motor>
+164-IIIв.M	<electric_motor>
+ШУ164-III	<electric-cabinet_2022>
+164-III.P	<sensor>
+2ШПС1	<electric-cabinet_2022>
+ПУ164-III	<remote_controller_2023>
+ПУ204-I	<remote_controller_2023>
+ШУ204-I	<electric-cabinet_2022>
+204-Iа.M	<electric_motor>
+204-Iб.M	<electric_motor>
+ШУ204-I	<electric-cabinet_2022>
+204-I.PIS	<sensor>
+204-I.XS	<sensor>
+3ШПС1	<electric-cabinet_2022>
+ПУ204-I	<remote_controller_2023>
+ПУ204-II	<remote_controller_2023>
+ШУ204-II	<electric-cabinet_2022>
+204-IIа.M	<electric_motor>
+204-IIб.M	<electric_motor>
+ШУ204-II	<electric-cabinet_2022>
+204-II.PIS	<sensor>
+204-II.XS	<sensor>
+3ШПС1	<electric-cabinet_2022>
+ПУ204-II	<remote_controller_2023>
+ПУ204-III	<remote_controller_2023>
+ШУ204-III	<electric-cabinet_2022>
+204-IIIа.M	<electric_motor>
+204-IIIб.M	<electric_motor>
+ШУ204-III	<electric-cabinet_2022>
+204-III.PIS	<sensor>
+204-III.XS	<sensor>
+3ШПС1	<electric-cabinet_2022>
+ПУ204-III	<remote_controller_2023>
+ПУ204-IV	<remote_controller_2023>
+ШУ204-IV	<electric-cabinet_2022>
+204-IVа.M	<electric_motor>
+204-IVб.M	<electric_motor>
+ШУ204-IV	<electric-cabinet_2022>
+204-IV.PIS	<sensor>
+204-IV.XS	<sensor>
+3ШПС1	<electric-cabinet_2022>
+ПУ204-IV	<remote_controller_2023>
+ПУ204-V	<remote_controller_2023>
+ШУ204-V	<electric-cabinet_2022>
+204-Vа.M	<electric_motor>
+204-Vб.M	<electric_motor>
+ШУ204-V	<electric-cabinet_2022>
+204-V.PIS	<sensor>
+204-V.XS	<sensor>
+3ШПС1	<electric-cabinet_2022>
+ПУ204-V	<remote_controller_2023>
+ПУ204-VI	<remote_controller_2023>
+ШУ204-VI	<electric-cabinet_2022>
+204-VIа.M	<electric_motor>
+204-VIб.M	<electric_motor>
+ШУ204-VI	<electric-cabinet_2022>
+204-VI.PIS	<sensor>
+204-VI.XS	<sensor>
+3ШПС1	<electric-cabinet_2022>
+ПУ204-VI	<remote_controller_2023>
+3ЩСУ3.2	<electric-cabinet_2022>
+3ЩСУ5.4	<electric-cabinet_2022>
+ШУ209-III	<electric-cabinet_2022>
+ШУ209-III	<electric-cabinet_2022>
+ШУ209-III	<electric-cabinet_2022>
+ШУ209-III	<electric-cabinet_2022>
++MCC	<electric-cabinet_2022>
++MCC	<electric-cabinet_2022>
++MCC	<electric-cabinet_2022>
++MCC	<electric-cabinet_2022>
