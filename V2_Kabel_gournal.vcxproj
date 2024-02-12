@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="V2_Kabel_gournal.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="помощь.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

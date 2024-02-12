@@ -1,1 +1,2 @@
 C:\Users\Fishman.DB.CORP\Documents\GitHub\V2_Kabel_gournal\x64\Release\V2_Kabel_gournal.exe
+C:\Users\Fishman\Documents\GitHub\V2_Kabel_gournal\x64\Release\V2_Kabel_gournal.exe
